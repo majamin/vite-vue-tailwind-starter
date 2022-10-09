@@ -7,20 +7,24 @@ import HelloWorld from "@/components/HelloWorld.vue";
 <template>
   <main class="mx-auto max-w-screen-md">
     <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img
-          src="vite.svg"
-          class="mx-auto my-4 h-32 transition-all duration-200 ease-in-out will-change-auto hover:shadow-gray-900 hover:drop-shadow-xl"
-          alt="Vite logo"
-        />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img
-          src="@/assets/vue.svg"
-          class="mx-auto my-4 h-32 transition-all duration-200 ease-in-out will-change-auto hover:shadow-gray-900 hover:drop-shadow-xl"
-          alt="Vue logo"
-        />
-      </a>
+      <div class="my-4 mx-auto max-w-fit">
+        <a href="https://vitejs.dev" target="_blank">
+          <img
+            src="vite.svg"
+            class="w-32 transition-all duration-200 ease-in-out will-change-auto hover:shadow-gray-900 hover:drop-shadow-xl"
+            alt="Vite logo"
+          />
+        </a>
+      </div>
+      <div class="my-4 mx-auto max-w-fit">
+        <a href="https://vuejs.org/" target="_blank">
+          <img
+            src="@/assets/vue.svg"
+            class="w-32 transition-all duration-200 ease-in-out will-change-auto hover:shadow-gray-900 hover:drop-shadow-xl"
+            alt="Vite logo"
+          />
+        </a>
+      </div>
     </div>
     <HelloWorld msg="Vite + Vue" />
   </main>
