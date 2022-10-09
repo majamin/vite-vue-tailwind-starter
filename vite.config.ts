@@ -1,24 +1,15 @@
 //@ts-nocheck
-import vue from '@vitejs/plugin-vue'
-import { fileURLToPath, URL } from 'url'
-import { UserConfig } from 'vite'
+import vue from "@vitejs/plugin-vue";
+import { fileURLToPath, URL } from "url";
+import { UserConfig } from "vite";
 
 const config: UserConfig = {
-    plugins: [vue()],
-    resolve: {
-        alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)),
-        },
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
-    build: {
-        rollupOptions: {
-            output: {
-                manualChunks: {
-                    vue: ['vue', 'vue-router', 'pinia', 'vue-toastification'],
-                },
-            },
-        },
-    },
-}
+  },
+};
 
-export default config
+export default config;
