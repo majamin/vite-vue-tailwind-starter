@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import BaseButton from "@/components/BaseButton.vue";
 
 defineProps<{ msg: string }>();
 
 const count = ref(0);
+
+function addCount(clicked: boolean) {
+  clicked ? count.value += 1 : null
+}
+
+function resetCount(clicked: boolean) {
+  clicked ? count.value = 0 : null
+}
+
 </script>
 
 <template>
@@ -12,13 +22,11 @@ const count = ref(0);
   <div
     class="my-4 flex h-36 flex-col justify-evenly bg-zinc-100 text-center align-middle"
   >
-    <button
-      class="mx-auto max-w-fit bg-sky-600 text-white"
-      type="button"
-      @click="count++"
-    >
-      count is {{ count }}
-    </button>
+    <div class="mx-auto flex w-52 items-center justify-between">
+      <BaseButton @count-handler="addCount">Add</BaseButton>
+      <div class="text-2xl">{{ count }}</div>
+      <BaseButton @count-handler="resetCount">Reset</BaseButton>
+    </div>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR

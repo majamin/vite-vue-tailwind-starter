@@ -5,9 +5,9 @@ import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
-  <main class="mx-auto max-w-screen-md">
-    <div>
-      <div class="my-4 mx-auto max-w-fit">
+  <main class="my-24 mx-auto max-w-screen-md">
+    <div class="my-16 flex justify-center">
+      <div class="max-w-fit mx-10">
         <a href="https://vitejs.dev" target="_blank">
           <img
             src="vite.svg"
@@ -16,7 +16,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
           />
         </a>
       </div>
-      <div class="my-4 mx-auto max-w-fit">
+      <div class="max-w-fit mx-10">
         <a href="https://vuejs.org/" target="_blank">
           <img
             src="@/assets/vue.svg"
