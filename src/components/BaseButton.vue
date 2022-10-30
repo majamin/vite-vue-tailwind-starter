@@ -10,7 +10,7 @@ const emit = defineEmits<{
   <button
     @click="emit('click-handler', true)"
     type="button"
-    class="max-w-fit bg-sky-600 text-white"
+    class="bg-sky-600 text-white"
   >
     <!-- Unnamed, default slot with default-->
     <slot>Submit</slot>
