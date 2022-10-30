@@ -5,6 +5,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
+  <!-- Tailwindcss styling -->
   <main class="my-24 mx-auto max-w-screen-md">
     <div class="my-16 flex justify-center">
       <div class="max-w-fit mx-10">
@@ -26,6 +27,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
         </a>
       </div>
     </div>
+      <!-- HelloWorld is a component receiving props -->
     <HelloWorld msg="Vite + Vue" />
   </main>
 </template>

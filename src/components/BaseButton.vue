@@ -1,16 +1,18 @@
 <script setup lang="ts">
 
+// type-safe emit
 const emit = defineEmits<{
-  (event: 'count-handler', clicked: boolean): void;
+  (event: 'click-handler', clicked: boolean): void;
 }>()
 </script>
 
 <template>
   <button
-    @click="emit('count-handler', true)"
+    @click="emit('click-handler', true)"
     type="button"
     class="max-w-fit bg-sky-600 text-white"
   >
+    <!-- Unnamed, default slot with default-->
     <slot>Submit</slot>
   </button>
 </template>
