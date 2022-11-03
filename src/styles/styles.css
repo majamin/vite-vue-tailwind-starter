@@ -8,6 +8,13 @@
   html {
     @apply text-center align-middle text-gray-700;
   }
+  h1 {
+    @apply mb-10 mt-20 divide-lime-600 font-serif text-4xl;
+    @apply mb-10 mt-20 divide-lime-600 font-serif text-2xl text-cyan-800;
+  }
+  h2 {
+    @apply mb-10 mt-20 divide-lime-600 font-serif text-2xl text-cyan-800;
+  }
 }
 
 button,
