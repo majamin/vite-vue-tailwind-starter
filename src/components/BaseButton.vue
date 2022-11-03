@@ -1,9 +1,8 @@
 <script setup lang="ts">
-
 // type-safe emit
 const emit = defineEmits<{
-  (event: 'click-handler', clicked: boolean): void;
-}>()
+  (event: "click-handler", clicked: boolean): void;
+}>();
 </script>
 
 <template>

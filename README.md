@@ -7,6 +7,6 @@ Use it to start a basic project or to get helpful insights on how Vue works.
 
 ## Implementations
 
-* Basic Tailwind configuration
-* Vite configuration: '@' refers to root
-* Reactivity and slots
+- Basic Tailwind configuration
+- Vite configuration: '@' refers to root
+- Reactivity and slots

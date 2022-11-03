@@ -24,7 +24,7 @@ function resetCount(clicked: boolean) {
   <div
     class="my-4 flex h-36 flex-col justify-evenly bg-zinc-100 text-center align-middle"
   >
-    <div class="flex flex-row items-center justify-evenly w-72 mx-auto">
+    <div class="mx-auto flex w-72 flex-row items-center justify-evenly">
       <!-- click-handler listens and passes the value emitted to addCount-->
       <BaseButton @click-handler="addCount">Add</BaseButton>
       <!-- note: click-handler is defined in the component -->
@@ -33,14 +33,7 @@ function resetCount(clicked: boolean) {
     </div>
     <p>
       Edit
-      <code>components/HelloWorld.vue</code> to test HMR
+      <code>components/BasicProps.vue</code> to test HMR
     </p>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
 </template>
