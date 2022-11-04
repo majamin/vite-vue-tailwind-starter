@@ -42,11 +42,12 @@ defineProps<{ msg: string }>();
 
 const count = ref(0);
 
-// These functions are quite simple!
-// With greater complexity, consider using the "composable" pattern
+// These functions are quite simple! Consider:
+// 1. Using computed properties if you have complex logic and reactive data
+// 2. Composables for reusable components
 // https://vuejs.org/guide/reusability/composables.html
 function addCount(clicked: boolean) {
-  clicked ? (count.value += 1) : null;
+  clicked ? (count.value++) : null;
 }
 function resetCount(clicked: boolean) {
   clicked ? (count.value = 0) : null;
