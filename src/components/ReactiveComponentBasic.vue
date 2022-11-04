@@ -11,9 +11,9 @@
 
 <template>
   <div
-    class="my-4 flex flex-col justify-evenly bg-zinc-100 p-10 text-center align-middle"
+    class="my-8 flex flex-col justify-evenly bg-zinc-100 p-10 text-center align-middle shadow-md shadow-slate-400"
   >
-    <h1 class="mt-4">{{ msg }}</h1>
+    <div class="mt-4 mb-8 text-4xl font-black">{{ msg }}</div>
     <div class="mx-auto flex w-72 flex-row items-center justify-center">
       <!-- click-handler listens and passes the value emitted to addCount-->
       <div class="w-32">

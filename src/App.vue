@@ -1,11 +1,16 @@
 <!----------------------------------------------------------------------------
 
-  ~ APP ~
+  A starter template / learning project
+
+  Vite + Vue + Tailwind (w. Typescript)
+    Tailwind for styling
+      Composition API using script setup
 
 ----------------------------------------------------------------------------->
 <script setup lang="ts">
 import ReactiveComponentBasic from "@/components/ReactiveComponentBasic.vue";
 import NamedSlotsExample from "@/components/NamedSlotsExample.vue";
+import ComputedProperties from "@/components/ComputedProperties.vue";
 </script>
 
 <template>
@@ -13,12 +18,11 @@ import NamedSlotsExample from "@/components/NamedSlotsExample.vue";
     <!--------------------------
       Basic reactivity and props
     --------------------------->
-    <ReactiveComponentBasic msg="Basic Reactivity Example" />
+    <ReactiveComponentBasic msg="Basic Reactivity" />
     <!-------------
-      Named Slots
+      Named slots
     -------------->
-    <h2 class="font-serif">Named Slots Example</h2>
-    <NamedSlotsExample>
+    <NamedSlotsExample msg="Named Slots">
       <template v-slot:left>
         <div class="h-36 w-36 bg-amber-500"></div>
       </template>
@@ -29,5 +33,9 @@ import NamedSlotsExample from "@/components/NamedSlotsExample.vue";
         <div class="h-36 w-36 bg-fuchsia-500"></div>
       </template>
     </NamedSlotsExample>
+    <!-------------------
+      Computed properties
+    -------------------->
+    <ComputedProperties name="Marian" />
   </main>
 </template>
