@@ -32,4 +32,3 @@ const greeting = computed(() => {
     <div>{{ greeting }}</div>
   </div>
 </template>
-
