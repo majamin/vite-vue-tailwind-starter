@@ -12,10 +12,10 @@
 import BaseButton from "@/components/BaseButton.vue";
 import { reactive } from "vue";
 
-//------------ No typing ------------------------------------------------------
+//------------ Typescript correctly infers typing here ------------------------
 const state = reactive({ count: 0 });
 
-/*------------ With typing ----------------------------------------------------
+/*------------ We can specify types if need be --------------------------------
 interface MyState {
   count: number;
 }

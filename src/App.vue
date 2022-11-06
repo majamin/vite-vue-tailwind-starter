@@ -9,7 +9,7 @@
 import Example from "@/components/BaseExampleContainer.vue";
 import Reactive from "@/components/examples/ReactiveComponentBasic.vue";
 import Computed from "@/components/examples/ComputedProperties.vue";
-import NamedSlots from "@/components/examples/NamedSlotsExample.vue";
+import StyleBindings from "@/components/examples/StyleBindings.vue";
 </script>
 
 <template>
@@ -20,13 +20,8 @@ import NamedSlots from "@/components/examples/NamedSlotsExample.vue";
     <Example title="Computed Properties">
       <Computed name="there" />
     </Example>
-    <Example title="Named Slots">
-      <NamedSlots>
-        <!-- note that the templates are out of order, but rendered correctly -->
-        <template v-slot:middle> Middle </template>
-        <template v-slot:left> Left </template>
-        <template v-slot:right> Right </template>
-      </NamedSlots>
+    <Example title="Class and Style Bindings">
+      <StyleBindings />
     </Example>
   </main>
 </template>
