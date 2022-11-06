@@ -1,3 +1,10 @@
+<!-----------------------------------------------------------------------------
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+▒                                                                             ▒
+▒  This is the example container that is used throughout this project         ▒
+▒                                                                             ▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+------------------------------------------------------------------------------>
 <template>
   <div>
     <div class="text-3xl font-black text-zinc-600">{{ title }}</div>
@@ -10,8 +17,5 @@
 </template>
 
 <script setup lang="ts">
-// This is a good way of defining props.
-// Optionally, the constructor accepts an interface:
-// defineProps<CustomInterface>();
 const { title } = defineProps<{ title: string }>();
 </script>

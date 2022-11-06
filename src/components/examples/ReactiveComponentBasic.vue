@@ -1,39 +1,45 @@
-<!----------------------------------------------------------------------------
+<!-----------------------------------------------------------------------------
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+▒                                                                             ▒
+▒   ~ Basic reactivity example ~                                              ▒
+▒   `reactive` elements are js proxies and behave like objects.               ▒
+▒   Vue can track property access and mutations on reactive elements.         ▒
+▒   https://vuejs.org/guide/essentials/reactivity-fundamentals.html           ▒
+▒                                                                             ▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+------------------------------------------------------------------------------>
+<script setup lang="ts">
+import BaseButton from "@/components/BaseButton.vue";
+import { reactive } from "vue";
 
-  ~ Basic reactivity example ~
+//------------ No typing ------------------------------------------------------
+const state = reactive({ count: 0 });
 
------------------------------------------------------------------------------>
+/*------------ With typing ----------------------------------------------------
+interface MyState {
+  count: number;
+}
+const state: MyState = reactive({ count: 0 });
+-----------------------------------------------------------------------------*/
+
+function increment() {
+  state.count++;
+}
+function reset() {
+  state.count = 0;
+}
+</script>
 
 <template>
   <div>
     <div class="mx-auto flex w-72 flex-row items-center justify-center">
-      <!-- click-handler listens and passes the value emitted to addCount-->
       <div class="w-32">
-        <BaseButton @click-handler="addCount">Add</BaseButton>
+        <BaseButton @click="increment">+1</BaseButton>
       </div>
-      <!-- note: click-handler is defined in the component -->
-      <div class="w-32 text-2xl">{{ count }}</div>
+      <div class="w-32 text-2xl">{{ state.count }}</div>
       <div class="w-32">
-        <BaseButton @click-handler="resetCount">Reset</BaseButton>
+        <BaseButton @click="reset">Reset</BaseButton>
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from "vue";
-import BaseButton from "@/components/BaseButton.vue";
-
-const count = ref(0);
-
-// These functions are quite simple! Consider:
-// 1. Using computed properties if you have complex logic and reactive data
-// 2. Composables for reusable components
-// https://vuejs.org/guide/reusability/composables.html
-function addCount(clicked: boolean) {
-  clicked ? count.value++ : null;
-}
-function resetCount(clicked: boolean) {
-  clicked ? (count.value = 0) : null;
-}
-</script>
