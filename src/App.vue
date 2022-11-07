@@ -18,7 +18,7 @@ import StyleBindings from "@/components/examples/StyleBindings.vue";
       <Reactive />
     </Example>
     <Example title="Computed Properties">
-      <Computed name="there" />
+      <Computed />
     </Example>
     <Example title="Class and Style Bindings">
       <StyleBindings />
