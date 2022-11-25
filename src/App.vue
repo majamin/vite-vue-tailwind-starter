@@ -6,22 +6,33 @@
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ------------------------------------------------------------------------------>
 <script setup lang="ts">
-import Example from "@/components/BaseExampleContainer.vue";
-import Reactive from "@/components/examples/ReactiveComponentBasic.vue";
-import Computed from "@/components/examples/ComputedProperties.vue";
-import StyleBindings from "@/components/examples/StyleBindings.vue";
+import Example from "@/components/single/ExampleContainer.vue";
+import Reactive from "@/components/single/ReactiveComponentBasic.vue";
+import Computed from "@/components/single/ComputedProperties.vue";
+import StyleBindings from "@/components/single/StyleBindings.vue";
+import Conditional from "@/components/single/Conditional.vue";
+
+import Feature2x2Grid from "@/components/full/Feature2x2Grid.vue";
 </script>
 
 <template>
-  <main class="my-24 mx-auto flex max-w-screen-md flex-col space-y-12">
-    <Example title="Basic Reactivity">
+  <main class="my-24 flex flex-col space-y-12">
+    <Example class="container mx-auto" title="Basic Reactivity">
       <Reactive />
     </Example>
-    <Example title="Computed Properties">
+    <Example class="container mx-auto" title="Computed Properties">
       <Computed />
     </Example>
-    <Example title="Class and Style Bindings">
+    <Example class="container mx-auto" title="Class and Style Bindings">
       <StyleBindings />
     </Example>
+    <Example class="container mx-auto" title="Conditional Rendering">
+      <Conditional />
+    </Example>
+    <Feature2x2Grid class="bg-sky-200">
+      <template v-slot:title>Feature</template>
+      <template v-slot:tagline></template>
+      <template v-slot:tagline-more>A very clever quote</template>
+    </Feature2x2Grid>
   </main>
 </template>
