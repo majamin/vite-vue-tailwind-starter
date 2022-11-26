@@ -11,7 +11,7 @@ import BaseIcon from '@/components/base/BaseIcon.vue'
         <p
           class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
         >
-          <slot name="tagline">Tailwind UI - Feature 2x2 Grid</slot>
+          <slot name="tagline">2x2 Grid</slot>
         </p>
         <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
           <slot name="tagline-more">
