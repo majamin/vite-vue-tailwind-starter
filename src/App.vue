@@ -15,7 +15,7 @@ import Conditional from "@/components/single/Conditional.vue";
 import Feature2x2Grid from "@/components/full/Feature2x2Grid.vue";
 import CTASimpleCenter from "@/components/full/CTASimpleCenter.vue";
 import CTASplitImage from "@/components/full/CTASplitImage.vue";
-
+import PageSectionFAQ from "@/components/full/PageSectionFAQ.vue";
 </script>
 
 <template>
@@ -37,8 +37,9 @@ import CTASplitImage from "@/components/full/CTASplitImage.vue";
       <template v-slot:tagline></template>
       <template v-slot:tagline-more>A very clever quote</template>
     </Feature2x2Grid>
-    <CTASimpleCenter class="container mx-auto"/>
+    <CTASimpleCenter class="container mx-auto" />
     <!-- <CTASplitImage class="container mx-auto sm:rounded-md" /> -->
     <CTASplitImage />
+    <PageSectionFAQ />
   </main>
 </template>
