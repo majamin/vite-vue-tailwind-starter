@@ -40,6 +40,6 @@ import PageSectionFAQ from "@/components/full/PageSectionFAQ.vue";
     <CTASimpleCenter class="container mx-auto" />
     <!-- <CTASplitImage class="container mx-auto sm:rounded-md" /> -->
     <CTASplitImage />
-    <PageSectionFAQ />
+    <PageSectionFAQ class="container mx-auto"/>
   </main>
 </template>

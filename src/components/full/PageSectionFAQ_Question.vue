@@ -5,7 +5,7 @@ const toggled = ref(false);
 <template>
   <div
     @click="toggled = !toggled"
-    class="flex cursor-pointer flex-col space-y-8 rounded-md px-4 text-left"
+    class="flex cursor-pointer bg-indigo-100 flex-col space-y-8 rounded-md px-8 text-left py-8 shadow-md shadow-gray-400"
   >
     <div class="flex space-x-6">
       <div class="flex w-full flex-col">
