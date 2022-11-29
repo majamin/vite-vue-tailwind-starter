@@ -12,6 +12,7 @@ import Computed from "@/components/VueBasics/ComputedProperties.vue";
 import StyleBindings from "@/components/VueBasics/StyleBindings.vue";
 import Conditional from "@/components/VueBasics/Conditional.vue";
 
+import NavBar from '@/components/Navigation/NavBar.vue'
 import Feature2x2Grid from "@/components/Sections/PageFeat2x2GridCentered.vue";
 import CTASimpleCenter from "@/components/Sections/CTASimpleCenter.vue";
 import CTASplitImage from "@/components/Sections/CTASplitImage.vue";
@@ -20,7 +21,8 @@ import TableTemplate from "@/components/Lists/TableTemplate.vue";
 </script>
 
 <template>
-  <main class="my-24 flex flex-col space-y-12">
+  <main class="flex flex-col space-y-12">
+    <NavBar />
     <Example class="container mx-auto" title="Basic Reactivity">
       <Reactive />
     </Example>
