@@ -7,7 +7,7 @@
 ------------------------------------------------------------------------------>
 
 <script setup lang="ts">
-import BaseButton from "@/components/base/BaseButton.vue";
+import BaseButton from "@/components/Base/BaseButton.vue";
 </script>
 <template>
   <div class="flex flex-col overflow-hidden md:flex-row">

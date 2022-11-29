@@ -9,7 +9,7 @@
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ------------------------------------------------------------------------------>
 <script setup lang="ts">
-import BaseButton from "@/components/base/BaseButton.vue";
+import BaseButton from "@/components/Base/BaseButton.vue";
 import { reactive } from "vue";
 
 //------------ Typescript correctly infers typing here ------------------------

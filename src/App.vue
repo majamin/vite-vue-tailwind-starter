@@ -6,17 +6,17 @@
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ------------------------------------------------------------------------------>
 <script setup lang="ts">
-import Example from "@/components/single/ExampleContainer.vue";
-import Reactive from "@/components/single/ReactiveComponentBasic.vue";
-import Computed from "@/components/single/ComputedProperties.vue";
-import StyleBindings from "@/components/single/StyleBindings.vue";
-import Conditional from "@/components/single/Conditional.vue";
+import Example from "@/components/VueBasics/ExampleContainer.vue";
+import Reactive from "@/components/VueBasics/ReactiveComponentBasic.vue";
+import Computed from "@/components/VueBasics/ComputedProperties.vue";
+import StyleBindings from "@/components/VueBasics/StyleBindings.vue";
+import Conditional from "@/components/VueBasics/Conditional.vue";
 
-import Feature2x2Grid from "@/components/full/Feature2x2Grid.vue";
-import CTASimpleCenter from "@/components/full/CTASimpleCenter.vue";
-import CTASplitImage from "@/components/full/CTASplitImage.vue";
-import PageSectionFAQ from "@/components/full/PageSectionFAQ.vue";
-import TableTemplate from "@/components/full/TableTemplate.vue";
+import Feature2x2Grid from "@/components/Sections/PageFeat2x2GridCentered.vue";
+import CTASimpleCenter from "@/components/Sections/CTASimpleCenter.vue";
+import CTASplitImage from "@/components/Sections/CTASplitImage.vue";
+import PageSectionFAQ from "@/components/Faq/PageSectionFAQ.vue";
+import TableTemplate from "@/components/Lists/TableTemplate.vue";
 </script>
 
 <template>

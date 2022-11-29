@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import BaseButton from "@/components/base/BaseButton.vue";
+import BaseButton from "@/components/Base/BaseButton.vue";
 const toggled = ref(true);
 </script>
 <template>

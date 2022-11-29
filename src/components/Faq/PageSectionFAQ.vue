@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Question from "@/components/full/PageSectionFAQ_Question.vue";
+import Question from "@/components/Faq/PageSectionFAQ_Question.vue";
 const { dark } = defineProps<{ dark: false }>();
 </script>
 <template>
