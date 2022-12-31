@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const data = {
-  header: ["model", "mpg", "hp", "gear"],
+  header: ["model", "mpg", "hp", "gear", "seats"],
   values: [
-    ["Mazda RX4", 21.0, 110, 4],
-    ["Mazda RX4 Wag", 21.0, "NA", 4],
-    ["Datsun 710", 22.8, 93, 4],
-    ["Hornet 4 Drive", 21.4, 110, 3],
-    ["Valiant", 18.1, 105, 3],
+    ["Mazda RX4", 21.0, 110, 4, 2],
+    ["Mazda RX4 Wag", 21.0, "NA", 4, 5],
+    ["Datsun 710", 22.8, 93, 4, 2],
+    ["Hornet 4 Drive", 21.4, 110, 3, 2],
+    ["Valiant", 18.1, 105, 3, 2],
   ],
 };
 </script>
@@ -23,9 +23,7 @@ const data = {
       <tbody>
         <tr v-for="row in data.values">
           <th scope="row">{{ row[0] }}</th>
-          <td>{{ row[1] }}</td>
-          <td>{{ row[2] }}</td>
-          <td>{{ row[3] }}</td>
+          <td v-for="i in row.length">{{ row[i] }}</td>
         </tr>
       </tbody>
     </table>
@@ -37,7 +35,7 @@ table {
   @apply w-full text-left text-sm text-gray-500 dark:text-gray-400;
 }
 thead {
-  @apply text-xs uppercase border-b-4 text-gray-700 dark:bg-gray-700 dark:text-gray-400;
+  @apply border-b-4 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400;
 }
 thead > tr > th {
   @apply py-3 px-6;
