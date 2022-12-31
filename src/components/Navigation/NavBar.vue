@@ -2,12 +2,14 @@
 import { ref } from "vue";
 const mobileMenuActive = ref(false);
 const profileMenuActive = ref(false);
+// TODO: if using router, navbar links that match route should appear active
 </script>
 <template>
-  <nav class="bg-gray-800">
+  <nav class="bg-gray-50 dark:bg-gray-800">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div class="inset-y-0 left-0 flex items-center">
+          <!-- absolute sm:hidden -->
           <!-- Mobile menu button-->
           <button
             @click="mobileMenuActive = !mobileMenuActive"
@@ -80,31 +82,18 @@ const profileMenuActive = ref(false);
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a
-                href="#"
-                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                aria-current="page"
-                >Dashboard</a
-              >
-
-              <a
-                href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >Team</a
-              >
-
-              <a
-                href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >Projects</a
-              >
-
-              <a
-                href="#"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >Calendar</a
-              >
+              <a href="#" class="group" aria-current="page"
+                >Dashboard<span class="route-is-active"></span
+              ></a>
+              <a href="#" class="group"
+                >Team<span class="group-hover:max-w-full"></span
+              ></a>
+              <a href="#" class="group"
+                >Projects<span class="group-hover:max-w-full"></span
+              ></a>
+              <a href="#" class="group"
+                >Calendar<span class="group-hover:max-w-full"></span
+              ></a>
             </div>
           </div>
         </div>
@@ -113,7 +102,7 @@ const profileMenuActive = ref(false);
         >
           <button
             type="button"
-            class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            class="rounded-full p-1 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 dark:bg-gray-600 dark:hover:text-white dark:text-gray-200"
           >
             <span class="sr-only">View notifications</span>
             <!-- Heroicon name: outline/bell -->
@@ -138,6 +127,7 @@ const profileMenuActive = ref(false);
           <div class="relative ml-3">
             <div>
               <button
+                @focusout="profileMenuActive = false"
                 @click="profileMenuActive = !profileMenuActive"
                 type="button"
                 class="flex min-w-[2rem] text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -219,19 +209,17 @@ const profileMenuActive = ref(false);
 
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white dark:text-gray-300"
             >Team</a
           >
-
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white dark:text-gray-300"
             >Projects</a
           >
-
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 hover:text-white dark:text-gray-300"
             >Calendar</a
           >
         </div>
@@ -241,6 +229,18 @@ const profileMenuActive = ref(false);
 </template>
 
 <style scoped lang="postcss">
+a {
+  @apply rounded-md px-3 py-2 text-sm font-medium dark:text-gray-300;
+}
+
+a > span {
+  @apply block h-0.5 max-w-0 bg-sky-800 transition-all duration-500 dark:bg-gray-100;
+}
+
+a > span.route-is-active {
+  @apply block h-0.5 max-w-full bg-sky-800 transition-all duration-500 dark:bg-gray-100;
+}
+
 .drop-enter-active {
   transition: all 0.2s ease-out;
 }
